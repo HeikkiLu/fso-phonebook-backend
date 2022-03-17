@@ -5,6 +5,7 @@ const morgan = require('morgan')
 const cors = require('cors')
 
 app.use(express.json())
+app.use(express.static('build'))
 app.use(
   morgan(':method :status :res[content-length] - :response-time ms :person')
 );
